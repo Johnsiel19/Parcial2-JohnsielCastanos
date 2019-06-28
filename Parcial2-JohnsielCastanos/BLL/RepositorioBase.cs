@@ -18,8 +18,9 @@ namespace Parcial2_JohnsielCastanos.BLL
                 _contexto = contexto;
             }
 
-         
-            public bool Guardar(T entity)
+
+
+        public virtual bool Guardar(T entity)
             {
                 bool paso = false;
 
@@ -57,7 +58,7 @@ namespace Parcial2_JohnsielCastanos.BLL
                 return paso;
             }
 
-            public bool Eliminar(int id)
+        public virtual  bool Eliminar(int id)
             {
                 bool paso = false;
 
@@ -95,7 +96,7 @@ namespace Parcial2_JohnsielCastanos.BLL
                 return entity;
             }
 
-            public List<T> GetList(Expression<Func<T, bool>> expression)
+            public virtual List<T> GetList(Expression<Func<T, bool>> expression)
             {
                 List<T> Lista = new List<T>();
                 try
@@ -109,7 +110,7 @@ namespace Parcial2_JohnsielCastanos.BLL
                 return Lista;
             }
 
-            public void Dispose()
+            public virtual void Dispose()
             {
                 _contexto.Dispose();
             }
