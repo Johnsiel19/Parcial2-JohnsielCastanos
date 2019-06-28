@@ -30,5 +30,11 @@ namespace Parcial2_JohnsielCastanos
             rEstudiantes frm = new rEstudiantes();
             frm.Show();
         }
+
+        private void InscripcionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rInscripcion frm = new rInscripcion();
+            frm.Show();
+        }
     }
 }

@@ -24,6 +24,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
             bool paso = false;
             Contexto db2 = new Contexto();
+
             try
             {
                 if (db2.Asignaturas.Any(p => p.Descripcion.Equals(descripcion)))
