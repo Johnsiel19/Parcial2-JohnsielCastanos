@@ -19,7 +19,24 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             InitializeComponent();
         }
-
+        public static bool NoDuplicado(string descripcion)
+        {
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            bool paso = false;
+            Contexto db2 = new Contexto();
+            try
+            {
+                if (db2.Asignaturas.Any(p => p.Descripcion.Equals(descripcion)))
+                {
+                    paso = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return paso;
+        }
 
         private void Limpiar()
         {
@@ -63,6 +80,12 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             if (CreditosnumericUpDown.Value == 0)
             {
                 errorProvider.SetError(CreditosnumericUpDown, "Los creditos no pueden ser cero");
+                paso = false;
+
+            }
+            if (NoDuplicado(DescripciontextBox.Text))
+            {
+                errorProvider.SetError(DescripciontextBox, "El nombre de la asignatura no debe ser igual a ningun otro");
                 paso = false;
 
             }
