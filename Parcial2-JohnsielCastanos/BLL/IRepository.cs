@@ -14,6 +14,10 @@ namespace Parcial2_JohnsielCastanos.BLL
         bool Guardar(T entity);
         bool Modificar(T entity);
         bool Eliminar(int id);
+       
+
+
+
     }
 
 }

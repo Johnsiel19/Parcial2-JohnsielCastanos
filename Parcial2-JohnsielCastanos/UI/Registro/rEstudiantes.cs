@@ -148,5 +148,10 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 errorProvider.SetError(EstudianteIdnumericUpDown, "No se puede elimina, porque no existe");
             }
         }
+
+        private void REstudiantes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

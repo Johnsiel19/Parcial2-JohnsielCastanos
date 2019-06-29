@@ -19,6 +19,7 @@ namespace Parcial2_JohnsielCastanos.BLL
             }
 
 
+  
 
         public virtual bool Guardar(T entity)
             {

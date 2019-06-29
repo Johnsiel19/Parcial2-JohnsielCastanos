@@ -11,7 +11,8 @@ namespace Parcial2_JohnsielCastanos.Entidades
     {
         public int InscripcionId { get; set; }    
         public DateTime FechaInscripcion { get; set; }
-        public decimal Monto { get; set; }
+        public decimal MontoInscripcion{ get; set; }
+        public decimal MontoCreditos { get; set; }
         public int EstudianteId { get; set; }
        // [ForeignKey("EstudianteId")]
         public virtual List<InscripcionDetalle> Asignaturas { get; set; }
@@ -19,10 +20,23 @@ namespace Parcial2_JohnsielCastanos.Entidades
         {
             InscripcionId = 0 ;
             FechaInscripcion = DateTime.Now;
-            Monto = 0;
+            MontoInscripcion = 0;
+            MontoCreditos = 0;
             EstudianteId = 0;
             Asignaturas = new List<InscripcionDetalle>();
 
+        }
+
+        public void CalcularMonto()
+        {
+            decimal total = 0;
+
+            foreach (var item in Asignaturas)
+            {
+                total += item.SubTotal;
+            }
+
+            MontoInscripcion = total;
         }
     }
 }
