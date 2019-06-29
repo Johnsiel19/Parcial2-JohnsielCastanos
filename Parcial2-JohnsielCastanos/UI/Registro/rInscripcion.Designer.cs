@@ -59,11 +59,12 @@
             // 
             // detalleDataGridView
             // 
+            this.detalleDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.detalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.detalleDataGridView.Location = new System.Drawing.Point(21, 54);
+            this.detalleDataGridView.Location = new System.Drawing.Point(21, 69);
             this.detalleDataGridView.Name = "detalleDataGridView";
             this.detalleDataGridView.RowTemplate.Height = 24;
-            this.detalleDataGridView.Size = new System.Drawing.Size(293, 150);
+            this.detalleDataGridView.Size = new System.Drawing.Size(355, 150);
             this.detalleDataGridView.TabIndex = 0;
             // 
             // label1
@@ -105,6 +106,11 @@
             // InscripcionIdnumericUpDown
             // 
             this.InscripcionIdnumericUpDown.Location = new System.Drawing.Point(154, 28);
+            this.InscripcionIdnumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.InscripcionIdnumericUpDown.Name = "InscripcionIdnumericUpDown";
             this.InscripcionIdnumericUpDown.Size = new System.Drawing.Size(78, 22);
             this.InscripcionIdnumericUpDown.TabIndex = 5;
@@ -114,7 +120,7 @@
             this.EstudiantecomboBox.FormattingEnabled = true;
             this.EstudiantecomboBox.Location = new System.Drawing.Point(154, 70);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(188, 24);
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(250, 24);
             this.EstudiantecomboBox.TabIndex = 6;
             // 
             // AsignaturacomboBox
@@ -131,14 +137,19 @@
             this.FechaInscripciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaInscripciondateTimePicker.Location = new System.Drawing.Point(154, 123);
             this.FechaInscripciondateTimePicker.Name = "FechaInscripciondateTimePicker";
-            this.FechaInscripciondateTimePicker.Size = new System.Drawing.Size(188, 22);
+            this.FechaInscripciondateTimePicker.Size = new System.Drawing.Size(250, 22);
             this.FechaInscripciondateTimePicker.TabIndex = 8;
             // 
             // MontonumericUpDown
             // 
             this.MontonumericUpDown.Location = new System.Drawing.Point(154, 175);
+            this.MontonumericUpDown.Maximum = new decimal(new int[] {
+            20000,
+            0,
+            0,
+            0});
             this.MontonumericUpDown.Name = "MontonumericUpDown";
-            this.MontonumericUpDown.Size = new System.Drawing.Size(78, 22);
+            this.MontonumericUpDown.Size = new System.Drawing.Size(100, 22);
             this.MontonumericUpDown.TabIndex = 9;
             // 
             // label5
@@ -199,9 +210,9 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.AsignaturacomboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(28, 266);
+            this.groupBox1.Location = new System.Drawing.Point(28, 218);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(376, 270);
+            this.groupBox1.Size = new System.Drawing.Size(395, 270);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -246,16 +257,17 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 224);
+            this.label6.Location = new System.Drawing.Point(202, 497);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(118, 17);
+            this.label6.Size = new System.Drawing.Size(122, 17);
             this.label6.TabIndex = 37;
-            this.label6.Text = "Monto Inscripcion";
+            this.label6.Text = "Monto Inscripcion:";
             // 
             // MontoInscripciontextBox
             // 
-            this.MontoInscripciontextBox.Location = new System.Drawing.Point(154, 221);
+            this.MontoInscripciontextBox.Location = new System.Drawing.Point(326, 494);
             this.MontoInscripciontextBox.Name = "MontoInscripciontextBox";
+            this.MontoInscripciontextBox.ReadOnly = true;
             this.MontoInscripciontextBox.Size = new System.Drawing.Size(78, 22);
             this.MontoInscripciontextBox.TabIndex = 38;
             // 
@@ -267,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 632);
+            this.ClientSize = new System.Drawing.Size(452, 632);
             this.Controls.Add(this.MontoInscripciontextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Guardarbutton);

@@ -37,7 +37,9 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             EstudiantecomboBox.Text = string.Empty;
             AsignaturacomboBox.Text = string.Empty;
             MontonumericUpDown.Value = 0;
+            this.Detalle = new List<InscripcionDetalle>();
             errorProvider.Clear();
+            CargarGrid();
 
         }
        
@@ -79,11 +81,12 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
             bool paso = true;
             errorProvider.Clear();
+      
 
 
-            if (EstudiantecomboBox.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
             {
-                errorProvider.SetError(EstudiantecomboBox, "El campo Usuario no puede estar vacio");
+                errorProvider.SetError(EstudiantecomboBox, "El campo Estudiante no puede estar vacio");
                 EstudiantecomboBox.Focus();
                 paso = false;
 
@@ -97,7 +100,15 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
             }
 
-           
+            if (Detalle.Count == 0){
+                errorProvider.SetError(AsignaturacomboBox, "La inscripcion por lo menos debe tener una asignatura");
+                AsignaturacomboBox.Focus();
+                paso = false;
+
+            }
+
+
+
             return paso;
 
         }
@@ -150,7 +161,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
             if (inscripcion != null)
             {
-                MessageBox.Show("Incripcion escontrado");
+             
                 LlenaCampo(inscripcion);
 
             }
@@ -178,7 +189,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             inscripcion.CalcularMonto();
             if (InscripcionIdnumericUpDown.Value == 0)
             {
-                paso = db.Guardar(inscripcion);
+                paso = db.GuardarDetalle(inscripcion);
             }
             else
             {
@@ -187,7 +198,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                     MessageBox.Show("No se puede modificar un Estudiante que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = db.Modificar(inscripcion);
+                paso = db.ModificarDetalle(inscripcion);
 
             }
 
@@ -242,7 +253,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             {
                 //remover la fila
                 Detalle.RemoveAt(detalleDataGridView.CurrentRow.Index);
-
                 CargarGrid();
             }
         }

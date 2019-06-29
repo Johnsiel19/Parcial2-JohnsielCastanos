@@ -45,6 +45,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             DescripciontextBox.Text = string.Empty;
             CreditosnumericUpDown.Value = 0;
             errorProvider.Clear();
+           
 
         }
 
