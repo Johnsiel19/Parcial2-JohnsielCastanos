@@ -40,7 +40,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             this.Detalle = new List<InscripcionDetalle>();
             errorProvider.Clear();
             CargarGrid();
-
         }
        
         private Inscripcion LlenaClase()
@@ -49,7 +48,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             inscripcion.Asignaturas = this.Detalle;
             inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
             inscripcion.InscripcionId = Convert.ToInt32(InscripcionIdnumericUpDown.Value);
-            inscripcion.MontoCreditos = MontonumericUpDown.Value;
+            inscripcion.MontoCreditos = (double)MontonumericUpDown.Value;
             inscripcion.CalcularMonto();
             inscripcion.FechaInscripcion = FechaInscripciondateTimePicker.Value;
             
@@ -62,12 +61,11 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             InscripcionIdnumericUpDown.Value = inscripcion.InscripcionId;
             EstudiantecomboBox.Text = inscripcion.EstudianteId.ToString();
             MontoInscripciontextBox.Text = inscripcion.MontoInscripcion.ToString();
-            MontonumericUpDown.Value = inscripcion.MontoCreditos;
+            MontonumericUpDown.Value = (decimal)inscripcion.MontoCreditos;
             FechaInscripciondateTimePicker.Value = inscripcion.FechaInscripcion;
             this.Detalle = inscripcion.Asignaturas;
             CargarGrid();
   
-
         }
 
         private void CargarGrid()
@@ -81,8 +79,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
             bool paso = true;
             errorProvider.Clear();
-      
-
 
             if (string.IsNullOrWhiteSpace(EstudiantecomboBox.Text))
             {
@@ -104,13 +100,8 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 errorProvider.SetError(AsignaturacomboBox, "La inscripcion por lo menos debe tener una asignatura");
                 AsignaturacomboBox.Focus();
                 paso = false;
-
             }
-
-
-
             return paso;
-
         }
 
         private bool ExisteEnLaBaseDeDatos()
@@ -118,10 +109,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
             Inscripcion inscripcion = db.Buscar((int)InscripcionIdnumericUpDown.Value);
             return (inscripcion != null);
-
         }
-
-
 
         private void LlenarComboBox()
         {
@@ -131,8 +119,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             AsignaturacomboBox.DataSource = listado2;
             AsignaturacomboBox.DisplayMember = "Descripcion";
             AsignaturacomboBox.ValueMember = "AsignaturaId";
-
-
 
         }
 
@@ -144,8 +130,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             EstudiantecomboBox.DataSource = listado;
             EstudiantecomboBox.DisplayMember = "Nombre";
             EstudiantecomboBox.ValueMember = "EstudianteId";
-
-
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -161,9 +145,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
             if (inscripcion != null)
             {
-             
                 LlenaCampo(inscripcion);
-
             }
             else
             {
@@ -217,7 +199,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             int id;
             int.TryParse(InscripcionIdnumericUpDown.Text, out id);
             Limpiar();
-            if (db.Eliminar(id))
+            if (InscripcionBLL.Eliminar(id))
             {
                 MessageBox.Show("Eliminado");
             }

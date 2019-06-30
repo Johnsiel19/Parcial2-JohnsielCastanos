@@ -70,19 +70,18 @@ namespace Parcial2_JohnsielCastanos.BLL
         {
             bool paso = false;
             Contexto db = new Contexto();
-
             try
             {
-                RepositorioBase<Estudiantes> dbE = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+                RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
 
                 if (db.Inscripcion.Add(inscripcion) != null)
                 {
-                    var estudiante = dbE.Buscar(inscripcion.EstudianteId);
+                    var estudiante = dbEst.Buscar(inscripcion.EstudianteId);
 
                     inscripcion.CalcularMonto();
                     estudiante.Balance = (double)inscripcion.MontoInscripcion;
                     paso = db.SaveChanges() > 0;
-                    dbE.Modificar(estudiante);
+                    dbEst.Modificar(estudiante);
                 }
 
             }
@@ -93,6 +92,32 @@ namespace Parcial2_JohnsielCastanos.BLL
 
             return paso;
         }
+
+        public static bool Eliminar(int id)
+        {
+            bool paso = false;
+            Contexto db = new Contexto();
+            RepositorioBase<Estudiantes> dbEst = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            try
+            {
+                var Inscripcion = db.Inscripcion.Find(id);
+                var estudiante = dbEst.Buscar(Inscripcion.EstudianteId);
+                estudiante.Balance = estudiante.Balance - Inscripcion.MontoInscripcion;
+                dbEst.Modificar(estudiante);
+                db.Entry(Inscripcion).State = EntityState.Deleted;
+                paso = (db.SaveChanges() > 0);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                db.Dispose();
+            }
+            return paso;
+        }
+
 
     }
 }

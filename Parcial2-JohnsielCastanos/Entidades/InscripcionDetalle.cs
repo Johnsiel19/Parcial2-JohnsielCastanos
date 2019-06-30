@@ -44,8 +44,6 @@ namespace Parcial2_JohnsielCastanos.Entidades
         public InscripcionDetalle( int Inscricionid, int asignaturaid)
         {
 
-
-           
             InscripcionId = Inscricionid;
             AsignaturaId = asignaturaid;
             SubTotal = 0;
