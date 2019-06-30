@@ -75,6 +75,18 @@
     <Compile Include="UI\Consultas\cAsignaturas.Designer.cs">
       <DependentUpon>cAsignaturas.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Consultas\cEstudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cEstudiantes.Designer.cs">
+      <DependentUpon>cEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Consultas\cInscripciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cInscripciones.Designer.cs">
+      <DependentUpon>cInscripciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Registro\rAsignaturas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +120,9 @@
     </Compile>
     <EmbeddedResource Include="UI\Consultas\cAsignaturas.resx">
       <DependentUpon>cAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cInscripciones.resx">
+      <DependentUpon>cInscripciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Registro\rAsignaturas.resx">
       <DependentUpon>rAsignaturas.cs</DependentUpon>
