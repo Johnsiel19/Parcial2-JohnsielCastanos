@@ -178,7 +178,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            
             Inscripcion inscripcion;
             bool paso = false;
 
@@ -189,7 +189,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             inscripcion.CalcularMonto();
             if (InscripcionIdnumericUpDown.Value == 0)
             {
-                paso = db.GuardarDetalle(inscripcion);
+                paso = InscripcionBLL.Guardar(inscripcion);
             }
             else
             {
@@ -198,7 +198,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                     MessageBox.Show("No se puede modificar un Estudiante que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = db.ModificarDetalle(inscripcion);
+                paso= InscripcionBLL.Modificar(inscripcion);
 
             }
 
