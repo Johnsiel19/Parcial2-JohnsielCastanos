@@ -18,7 +18,10 @@ namespace Parcial2_JohnsielCastanos.BLL
          {
             _contexto = contexto;
          }
-
+        public RepositorioBase()
+        {
+            _contexto = new Contexto();
+        }
 
 
         public virtual bool Guardar(T entity)

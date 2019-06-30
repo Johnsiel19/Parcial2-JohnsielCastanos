@@ -46,7 +46,15 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.Asignaturas = this.Detalle;
-            inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            if (InscripcionIdnumericUpDown.Value == 0) {
+                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            }
+            else
+            {
+                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.Text);
+
+            }
+            
             inscripcion.InscripcionId = Convert.ToInt32(InscripcionIdnumericUpDown.Value);
             inscripcion.MontoCreditos = (double)MontonumericUpDown.Value;
             inscripcion.CalcularMonto();
@@ -188,7 +196,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 MessageBox.Show("Guardado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No fue posible guardar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            LlenaClase();
+            
             Limpiar();
         }
 
