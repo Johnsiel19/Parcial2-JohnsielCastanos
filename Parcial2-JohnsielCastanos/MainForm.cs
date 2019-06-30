@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Parcial2_JohnsielCastanos.UI.Registro;
+using Parcial2_JohnsielCastanos.UI.Consultas;
 
 namespace Parcial2_JohnsielCastanos
 {
@@ -35,6 +36,13 @@ namespace Parcial2_JohnsielCastanos
         {
             rInscripcion frm = new rInscripcion();
             frm.Show();
+        }
+
+        private void AsignaturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cAsignaturas frm = new cAsignaturas();
+            frm.Show();
+            
         }
     }
 }
