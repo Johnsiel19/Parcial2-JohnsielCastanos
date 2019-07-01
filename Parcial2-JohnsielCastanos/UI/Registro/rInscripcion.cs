@@ -11,8 +11,6 @@ using Parcial2_JohnsielCastanos.Entidades;
 using Parcial2_JohnsielCastanos.DAL;
 using Parcial2_JohnsielCastanos.BLL;
 
-
-
 namespace Parcial2_JohnsielCastanos.UI.Registro
 {
     
@@ -93,15 +91,13 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 errorProvider.SetError(EstudiantecomboBox, "El campo Estudiante no puede estar vacio");
                 EstudiantecomboBox.Focus();
                 paso = false;
-
             }
 
             if (MontonumericUpDown.Value == 0)
             {
-                errorProvider.SetError(MontonumericUpDown, "El Tipo Usuario no puede estar vacio");
+                errorProvider.SetError(MontonumericUpDown, "Debes elegir un monto de creditos");
                 MontonumericUpDown.Focus();
                 paso = false;
-
             }
 
             if (Detalle.Count == 0){
@@ -109,6 +105,8 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 AsignaturacomboBox.Focus();
                 paso = false;
             }
+
+           
             return paso;
         }
 
@@ -220,21 +218,31 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
-            Asignaturas asignatura = db.Buscar((int)AsignaturacomboBox.SelectedValue);
-            if (detalleDataGridView.DataSource != null)
-                this.Detalle = (List<InscripcionDetalle>)detalleDataGridView.DataSource;
-
-         
-
-            this.Detalle.Add(new InscripcionDetalle()
+            if(AsignaturacomboBox.Text == "")
             {
-                InscripcionId = (int)InscripcionIdnumericUpDown.Value,
-                AsignaturaId = (int)AsignaturacomboBox.SelectedValue,
-                Id = 0,
-                SubTotal = (asignatura.Creditos * MontonumericUpDown.Value)
-            });
+                errorProvider.SetError(AsignaturacomboBox, "Debe elegir una asignatura");
+                AsignaturacomboBox.Focus();
 
-            CargarGrid();
+            }
+            else
+            {
+
+            
+                Asignaturas asignatura = db.Buscar((int)AsignaturacomboBox.SelectedValue);
+                if (detalleDataGridView.DataSource != null)
+                    this.Detalle = (List<InscripcionDetalle>)detalleDataGridView.DataSource;
+
+                this.Detalle.Add(new InscripcionDetalle()
+                {
+                    InscripcionId = (int)InscripcionIdnumericUpDown.Value,
+                    AsignaturaId = (int)AsignaturacomboBox.SelectedValue,
+                    Id = 0,
+                    SubTotal = (asignatura.Creditos * MontonumericUpDown.Value)
+                });
+
+                CargarGrid();
+            }
+           
         }
 
         private void Removerbutton_Click(object sender, EventArgs e)
