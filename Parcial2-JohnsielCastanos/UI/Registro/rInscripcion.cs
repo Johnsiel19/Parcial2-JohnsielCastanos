@@ -66,18 +66,12 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             if (asignaturas!= null)
             {
                 LlenarComboBox3(asignaturas);
-
-
-
                 paso = true;
 
             }
             else
             {
-               
-
-                
-               EstudiantecomboBox.Text = inscripcion.EstudianteId.ToString();
+                EstudiantecomboBox.Text = inscripcion.EstudianteId.ToString();
                 paso = false;
 
             }
@@ -161,6 +155,8 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             Inscripcion inscripcion = db.Buscar((int)InscripcionIdnumericUpDown.Value);
             return (inscripcion != null);
         }
+
+
 
         private void LlenarComboBox()
         {
