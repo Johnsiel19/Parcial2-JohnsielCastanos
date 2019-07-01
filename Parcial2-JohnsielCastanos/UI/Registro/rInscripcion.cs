@@ -43,13 +43,9 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.Asignaturas = this.Detalle;
-            if (InscripcionIdnumericUpDown.Value == 0) {
-                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
-            }
-            else
-            {
-                inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.Text);
-            }
+   
+            inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
+            
             
             inscripcion.InscripcionId = Convert.ToInt32(InscripcionIdnumericUpDown.Value);
             inscripcion.MontoCreditos = (double)MontonumericUpDown.Value;
@@ -60,10 +56,37 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         }
 
+        private void Obtener(Inscripcion inscripcion)
+        {
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+            Estudiantes asignaturas;
+
+            asignaturas = db.Buscar(inscripcion.EstudianteId);
+
+            LlenarComboBox3(asignaturas);
+
+
+
+        }
+
+        private void LlenarComboBox3(Estudiantes estudiante)
+        {
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+            var listado2 = new List<Estudiantes>();
+            listado2 = db.GetList(p => p.EstudianteId == estudiante.EstudianteId);
+            EstudiantecomboBox.DataSource = listado2;
+            EstudiantecomboBox.DisplayMember = "Nombre";
+            EstudiantecomboBox.ValueMember = "EstudianteId";
+
+        }
         private void LlenaCampo(Inscripcion inscripcion)
         {
             InscripcionIdnumericUpDown.Value = inscripcion.InscripcionId;
-            EstudiantecomboBox.Text = inscripcion.EstudianteId.ToString();
+            if(InscripcionIdnumericUpDown.Value >0)
+            {
+                Obtener(inscripcion);
+
+            }
             MontoInscripciontextBox.Text = inscripcion.MontoInscripcion.ToString();
             MontonumericUpDown.Value = (decimal)inscripcion.MontoCreditos;
             FechaInscripciondateTimePicker.Value = inscripcion.FechaInscripcion;
@@ -108,14 +131,14 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private bool ExisteEnLaBaseDeDatos()
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             Inscripcion inscripcion = db.Buscar((int)InscripcionIdnumericUpDown.Value);
             return (inscripcion != null);
         }
 
         private void LlenarComboBox()
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             var listado2 = new List<Asignaturas>();
             listado2 = db.GetList(p => true);
             AsignaturacomboBox.DataSource = listado2;
@@ -126,7 +149,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void LLenarComboBox2()
         {
-            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>(new DAL.Contexto());
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
             var listado = new List<Estudiantes>();
             listado = db.GetList(l => true);
             EstudiantecomboBox.DataSource = listado;
@@ -136,7 +159,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             int id;
             Inscripcion inscripcion = new Inscripcion();
 
@@ -196,7 +219,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>(new DAL.Contexto());
+            RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
             errorProvider.Clear();
             int id;
             int.TryParse(InscripcionIdnumericUpDown.Text, out id);
@@ -213,7 +236,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void Agregarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
             if(AsignaturacomboBox.Text == "")
             {
                 errorProvider.SetError(AsignaturacomboBox, "Debe elegir una asignatura");
