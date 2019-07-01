@@ -123,16 +123,28 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             {
                 if (EstudianteIdnumericUpDown.Value > 0)
                 {
-                    if (db.Eliminar((int)EstudianteIdnumericUpDown.Value))
+                    if(Convert.ToUInt32( BalancetextBox.Text) > 0)
                     {
-                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Limpiar();
+
+                        MessageBox.Show("NO se pudo eliminar porque tiene Balance pendiente", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        if (db.Eliminar((int)EstudianteIdnumericUpDown.Value))
+                        {
+                            MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Limpiar();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                        }
+
 
                     }
+                   
 
                 }
             }
