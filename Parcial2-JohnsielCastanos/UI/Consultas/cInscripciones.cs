@@ -18,6 +18,7 @@ namespace Parcial2_JohnsielCastanos.UI.Consultas
         public cInscripciones()
         {
             InitializeComponent();
+            FiltrocomboBox.Text = "Todo";
         }
 
         private void Consultarbutton_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace Parcial2_JohnsielCastanos.UI.Consultas
                     else
                     {
                         listado = db.GetList(p => true);
+                        listado = listado.Where(c => c.FechaInscripcion.Date >= DesdedateTimePicker.Value.Date && c.FechaInscripcion.Date <= HastadateTimePicker.Value.Date).ToList();
                     }
 
                     ConsultadataGridView.DataSource = null;

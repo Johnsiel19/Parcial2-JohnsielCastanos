@@ -54,7 +54,6 @@ namespace Parcial2_JohnsielCastanos.UI.Consultas
             ConsultadataGridView.DataSource = null;
             ConsultadataGridView.DataSource = listado;
 
-
         }
     }
 }
