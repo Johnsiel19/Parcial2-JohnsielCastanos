@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parcial2-JohnsielCastanos", "Parcial2-JohnsielCastanos.csproj", "{8EB3ADCC-E4A3-459D-85A7-566A9C26FC34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parcial2-JohnsielCastanosTests", "..\Parcial2-JohnsielCastanosTests\Parcial2-JohnsielCastanosTests.csproj", "{29E1EADE-EA84-4C73-A232-1B4E6F849045}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8EB3ADCC-E4A3-459D-85A7-566A9C26FC34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EB3ADCC-E4A3-459D-85A7-566A9C26FC34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EB3ADCC-E4A3-459D-85A7-566A9C26FC34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E1EADE-EA84-4C73-A232-1B4E6F849045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E1EADE-EA84-4C73-A232-1B4E6F849045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E1EADE-EA84-4C73-A232-1B4E6F849045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E1EADE-EA84-4C73-A232-1B4E6F849045}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
