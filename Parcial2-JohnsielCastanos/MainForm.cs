@@ -44,5 +44,11 @@ namespace Parcial2_JohnsielCastanos
             frm.Show();
             
         }
+
+        private void InscripcionToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            cInscripciones frm = new cInscripciones();
+            frm.Show();
+        }
     }
 }

@@ -24,42 +24,108 @@ namespace Parcial2_JohnsielCastanos.UI.Consultas
         {
             var listado = new List<Inscripcion>();
             RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
-
-            if (CriteriotextBox.Text.Trim().Length > 0)
+            if (FiltroFecha.Checked == true)
             {
-                switch (FiltrocomboBox.Text)
+                try
                 {
-                    case "Todo":
+
+
+                    if (CriteriotextBox.Text.Trim().Length > 0)
+                    {
+                        switch (FiltrocomboBox.Text)
+                        {
+                            case "Todo":
+                                listado = db.GetList(p => true);
+                                break;
+
+                            case "Id":
+                                int id = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.InscripcionId == id);
+                                break;
+
+                            case "Estudiante Id":
+                                int est = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.EstudianteId == est);
+                                break;
+
+                            case "Monto":
+                                double mont = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.MontoInscripcion == mont);
+                                break;
+
+                            default:
+                                break;
+                        }
+                        listado = listado.Where(c => c.FechaInscripcion.Date >= DesdedateTimePicker.Value.Date && c.FechaInscripcion.Date <= HastadateTimePicker.Value.Date).ToList();
+                    }
+                    else
+                    {
                         listado = db.GetList(p => true);
-                        break;
+                    }
 
-                    case "Id":
-                        int id = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = db.GetList(p => p.InscripcionId == id);
-                        break;
+                    ConsultadataGridView.DataSource = null;
+                    ConsultadataGridView.DataSource = listado;
 
-                    case "Estudiante Id":
-                        int est = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = db.GetList(p => p.EstudianteId == est);
-                        break;
-                       
-                    case "Monto":
-                        double mont = Convert.ToInt32(CriteriotextBox.Text);
-                        listado = db.GetList(p => p.EstudianteId == mont);
-                        break;
-
-                    default:
-                        break;
                 }
-                listado = listado.Where(c => c.FechaInscripcion.Date >= DesdedateTimePicker.Value.Date && c.FechaInscripcion.Date <= HastadateTimePicker.Value.Date).ToList();
+                catch (Exception)
+                {
+                    MessageBox.Show("Introdujo un dato incorrecto");
+
+                }
+
+
             }
             else
             {
-                listado = db.GetList(p => true);
-            }
+                try
+                {
 
-            ConsultadataGridView.DataSource = null;
-            ConsultadataGridView.DataSource = listado;
-        }
+                    if (CriteriotextBox.Text.Trim().Length > 0)
+                    {
+                        switch (FiltrocomboBox.Text)
+                        {
+                            case "Todo":
+                                listado = db.GetList(p => true);
+                                break;
+
+                            case "Id":
+                                int id = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.InscripcionId == id);
+                                break;
+
+                            case "Estudiante Id":
+                                int est = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.EstudianteId == est);
+                                break;
+
+                            case "Monto":
+                                double mont = Convert.ToInt32(CriteriotextBox.Text);
+                                listado = db.GetList(p => p.MontoInscripcion == mont);
+                                break;
+
+                            default:
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        listado = db.GetList(p => true);
+                    }
+
+                    ConsultadataGridView.DataSource = null;
+                    ConsultadataGridView.DataSource = listado;
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Introdujo un dato incorrecto");
+
+                }
+
+            }
+           
+
+         }
+        
     }
 }
