@@ -25,7 +25,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             EstudiantecomboBox.Text = null;
             AsignaturacomboBox.Text = null;
             this.Detalle = new List<InscripcionDetalle>();
-
         }
 
         private void Limpiar()
@@ -50,7 +49,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             else
             {
                 inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.Text);
-
             }
             
             inscripcion.InscripcionId = Convert.ToInt32(InscripcionIdnumericUpDown.Value);
@@ -105,8 +103,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 AsignaturacomboBox.Focus();
                 paso = false;
             }
-
-           
             return paso;
         }
 
