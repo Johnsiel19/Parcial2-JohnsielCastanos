@@ -305,6 +305,7 @@
             this.Name = "rInscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Inscripcion";
+       
             ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontonumericUpDown)).EndInit();

@@ -33,7 +33,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             Estudiantes estudiante = new Estudiantes();
             estudiante.EstudianteId = Convert.ToInt32(EstudianteIdnumericUpDown.Value);
-            estudiante.Nombre = NombretextBox.Text;
+            estudiante.Nombre = NombretextBox.Text.Trim();
             estudiante.FechaIngreso = FechaIngresodateTimePicker.Value;
             return estudiante;
 
@@ -115,6 +115,33 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             Limpiar();
         }
 
+      
+        private void Eliminarbutton_Click(object sender, EventArgs e)
+        {
+            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
+            try
+            {
+                if (EstudianteIdnumericUpDown.Value > 0)
+                {
+                    if (db.Eliminar((int)EstudianteIdnumericUpDown.Value))
+                    {
+                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("NO se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>(new DAL.Contexto());
@@ -138,23 +165,10 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             }
         }
 
-        private void Eliminarbutton_Click(object sender, EventArgs e)
+        private void NombretextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>(new DAL.Contexto());
-            errorProvider.Clear();
-            int id;
-            int.TryParse(EstudianteIdnumericUpDown.Text, out id);
-            Limpiar();
-            if (db.Eliminar(id))
-            {
-                MessageBox.Show("Eliminado");
-            }
-            else
-            {
-                errorProvider.SetError(EstudianteIdnumericUpDown, "No se puede elimina, porque no existe");
-            }
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+                e.Handled = true;
         }
-
-     
     }
 }

@@ -44,10 +44,13 @@
             // 
             // ConsultadataGridView
             // 
+            this.ConsultadataGridView.AllowUserToAddRows = false;
+            this.ConsultadataGridView.AllowUserToDeleteRows = false;
             this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(18, 83);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
+            this.ConsultadataGridView.ReadOnly = true;
             this.ConsultadataGridView.RowTemplate.Height = 24;
             this.ConsultadataGridView.Size = new System.Drawing.Size(841, 302);
             this.ConsultadataGridView.TabIndex = 29;

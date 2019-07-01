@@ -180,6 +180,7 @@
             this.Name = "rAsignaturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Asignaturas";
+
             ((System.ComponentModel.ISupportInitialize)(this.AsignaturaIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CreditosnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();

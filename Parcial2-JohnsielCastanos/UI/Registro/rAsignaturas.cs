@@ -53,7 +53,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             Asignaturas asignatura = new Asignaturas();
             asignatura.AsignaturaId = Convert.ToInt32(AsignaturaIdnumericUpDown.Value);
-            asignatura.Descripcion = DescripciontextBox.Text;
+            asignatura.Descripcion = DescripciontextBox.Text.Trim();
             asignatura.Creditos = Convert.ToInt32(CreditosnumericUpDown.Value);
             return asignatura;
 
@@ -145,18 +145,28 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>(new DAL.Contexto());
-            errorProvider.Clear();
-            int id;
-            int.TryParse(AsignaturaIdnumericUpDown.Text, out id);
-            Limpiar();
-            if (db.Eliminar(id))
+
+            RepositorioBase<Asignaturas> db = new RepositorioBase<Asignaturas>();
+            try
             {
-                MessageBox.Show("Eliminado");
+                if (AsignaturaIdnumericUpDown.Value > 0)
+                {
+                    if (db.Eliminar((int)AsignaturaIdnumericUpDown.Value))
+                    {
+                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+                }
             }
-            else
+            catch (Exception)
             {
-                errorProvider.SetError(AsignaturaIdnumericUpDown, "No se puede elimina, porque no existe");
+                MessageBox.Show("NO se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -182,5 +192,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 MessageBox.Show("Asignatura  no existe");
             }
         }
+
+       
     }
 }

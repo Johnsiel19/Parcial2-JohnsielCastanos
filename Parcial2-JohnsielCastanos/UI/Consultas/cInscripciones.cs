@@ -29,8 +29,6 @@ namespace Parcial2_JohnsielCastanos.UI.Consultas
             {
                 try
                 {
-
-
                     if (CriteriotextBox.Text.Trim().Length > 0)
                     {
                         switch (FiltrocomboBox.Text)

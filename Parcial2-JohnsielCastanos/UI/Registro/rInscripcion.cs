@@ -253,17 +253,25 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             RepositorioBase<Inscripcion> db = new RepositorioBase<Inscripcion>();
-            errorProvider.Clear();
-            int id;
-            int.TryParse(InscripcionIdnumericUpDown.Text, out id);
-            Limpiar();
-            if (InscripcionBLL.Eliminar(id))
+            try
             {
-                MessageBox.Show("Eliminado");
+                if (InscripcionIdnumericUpDown.Value > 0)
+                {
+                    if (db.Eliminar((int)InscripcionIdnumericUpDown.Value))
+                    {
+                        MessageBox.Show("Eliminado", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede eliminar", "Atencion!!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+                }
             }
-            else
+            catch (Exception)
             {
-                errorProvider.SetError(InscripcionIdnumericUpDown, "No se puede elimina, porque no existe");
+                MessageBox.Show("NO se pudo eliminar", "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -307,5 +315,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 CargarGrid();
             }
         }
+
+        
     }
 }
