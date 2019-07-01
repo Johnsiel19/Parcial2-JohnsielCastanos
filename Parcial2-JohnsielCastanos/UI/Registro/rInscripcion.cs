@@ -20,10 +20,10 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         public rInscripcion()
         {
             InitializeComponent();
-            LlenarComboBox();
-            LLenarComboBox2();
-            EstudiantecomboBox.Text = null;
-            AsignaturacomboBox.Text = null;
+           // LlenarComboBox();
+           // LLenarComboBox2();
+            //EstudiantecomboBox.Text = null;
+           // AsignaturacomboBox.Text = null;
             this.Detalle = new List<InscripcionDetalle>();
         }
 
@@ -43,7 +43,7 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.Asignaturas = this.Detalle;
-   
+
             inscripcion.EstudianteId = Convert.ToInt32(EstudiantecomboBox.SelectedValue);
             
             
@@ -56,16 +56,32 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
         }
 
-        private void Obtener(Inscripcion inscripcion)
+        private bool Obtener(Inscripcion inscripcion)
         {
+            bool paso = true;
             RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
             Estudiantes asignaturas;
 
             asignaturas = db.Buscar(inscripcion.EstudianteId);
+            if (asignaturas!= null)
+            {
+                LlenarComboBox3(asignaturas);
 
-            LlenarComboBox3(asignaturas);
 
 
+                paso = true;
+
+            }
+            else
+            {
+               
+
+                
+               EstudiantecomboBox.Text = inscripcion.EstudianteId.ToString();
+                paso = false;
+
+            }
+            return paso;
 
         }
 
@@ -215,7 +231,18 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                     MessageBox.Show("No se puede modificar una inscripcion que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso= InscripcionBLL.Modificar(inscripcion);
+                if (Obtener(inscripcion))
+                {
+                    paso = InscripcionBLL.Modificar(inscripcion);
+
+
+                }
+                else
+                {
+                    MessageBox.Show("No se puede modificar una inscripcion porque el estudiante ya no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
 
             }
 
