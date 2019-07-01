@@ -9,12 +9,13 @@ namespace Parcial2_JohnsielCastanos.Entidades
 {
     public class Inscripcion
     {
-        public int InscripcionId { get; set; }    
+        public int InscripcionId { get; set; }
+        public int EstudianteId { get; set; }
+        //[ForeignKey("EstudianteId")]
         public DateTime FechaInscripcion { get; set; }
         public double MontoInscripcion{ get; set; }
         public double MontoCreditos { get; set; }
-        public int EstudianteId { get; set; }
-       // [ForeignKey("EstudianteId")]
+        
         public virtual List<InscripcionDetalle> Asignaturas { get; set; }
 
 

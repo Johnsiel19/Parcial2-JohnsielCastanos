@@ -91,7 +91,7 @@
             // 
             // EstudianteIdnumericUpDown
             // 
-            this.EstudianteIdnumericUpDown.Location = new System.Drawing.Point(145, 25);
+            this.EstudianteIdnumericUpDown.Location = new System.Drawing.Point(145, 28);
             this.EstudianteIdnumericUpDown.Name = "EstudianteIdnumericUpDown";
             this.EstudianteIdnumericUpDown.Size = new System.Drawing.Size(97, 22);
             this.EstudianteIdnumericUpDown.TabIndex = 10;
@@ -102,7 +102,7 @@
             this.FechaIngresodateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechaIngresodateTimePicker.Location = new System.Drawing.Point(145, 113);
             this.FechaIngresodateTimePicker.Name = "FechaIngresodateTimePicker";
-            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(97, 22);
+            this.FechaIngresodateTimePicker.Size = new System.Drawing.Size(202, 22);
             this.FechaIngresodateTimePicker.TabIndex = 14;
             // 
             // BalancetextBox
@@ -132,9 +132,9 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(150, 214);
+            this.Guardarbutton.Location = new System.Drawing.Point(145, 205);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(73, 59);
+            this.Guardarbutton.Size = new System.Drawing.Size(73, 67);
             this.Guardarbutton.TabIndex = 18;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -146,9 +146,9 @@
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(274, 214);
+            this.Eliminarbutton.Location = new System.Drawing.Point(269, 205);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(73, 59);
+            this.Eliminarbutton.Size = new System.Drawing.Size(73, 67);
             this.Eliminarbutton.TabIndex = 17;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -160,9 +160,9 @@
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(29, 214);
+            this.Nuevobutton.Location = new System.Drawing.Point(24, 205);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(73, 59);
+            this.Nuevobutton.Size = new System.Drawing.Size(73, 67);
             this.Nuevobutton.TabIndex = 15;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -177,7 +177,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 293);
+            this.ClientSize = new System.Drawing.Size(387, 296);
             this.Controls.Add(this.BalancetextBox);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
@@ -193,7 +193,7 @@
             this.Name = "rEstudiantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Estudiantes";
-            this.Load += new System.EventHandler(this.REstudiantes_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.EstudianteIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);

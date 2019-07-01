@@ -45,7 +45,7 @@
             // FiltroFecha
             // 
             this.FiltroFecha.AutoSize = true;
-            this.FiltroFecha.Location = new System.Drawing.Point(247, 40);
+            this.FiltroFecha.Location = new System.Drawing.Point(252, 41);
             this.FiltroFecha.Name = "FiltroFecha";
             this.FiltroFecha.Size = new System.Drawing.Size(109, 21);
             this.FiltroFecha.TabIndex = 42;
@@ -77,7 +77,7 @@
             "Id",
             "Nombre",
             "Balance"});
-            this.FiltrocomboBox.Location = new System.Drawing.Point(362, 37);
+            this.FiltrocomboBox.Location = new System.Drawing.Point(367, 38);
             this.FiltrocomboBox.Name = "FiltrocomboBox";
             this.FiltrocomboBox.Size = new System.Drawing.Size(121, 24);
             this.FiltrocomboBox.TabIndex = 39;
@@ -97,7 +97,7 @@
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.Location = new System.Drawing.Point(21, 40);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
-            this.DesdedateTimePicker.Size = new System.Drawing.Size(101, 22);
+            this.DesdedateTimePicker.Size = new System.Drawing.Size(106, 22);
             this.DesdedateTimePicker.TabIndex = 37;
             // 
             // label4

@@ -47,7 +47,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             BalancetextBox.Text = estudiante.Balance.ToString(); 
         }
 
-
         private bool Validar()
         {
             bool paso = true;
@@ -56,6 +55,13 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             if (string.IsNullOrWhiteSpace(NombretextBox.Text))
             {
                 errorProvider.SetError(NombretextBox, "Este campo no puede estar vacio");
+                paso = false;
+            }
+
+            if (FechaIngresodateTimePicker.Value > DateTime.Now)
+            {
+                errorProvider.SetError(FechaIngresodateTimePicker, "La fecha no puede ser despues de hoy");
+                FechaIngresodateTimePicker.Focus();
                 paso = false;
             }
 
@@ -149,9 +155,6 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
             }
         }
 
-        private void REstudiantes_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

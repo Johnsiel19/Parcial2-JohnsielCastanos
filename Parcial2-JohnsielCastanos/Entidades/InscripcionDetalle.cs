@@ -13,9 +13,10 @@ namespace Parcial2_JohnsielCastanos.Entidades
         [Key]
         public int Id { get; set; }
         public int InscripcionId { get; set; }
-       
+       // [ForeignKey("InscripcionId")]
+
         public int AsignaturaId { get; set; }
-       // [ForeignKey("AsignaturaId")]
+       //[ForeignKey("AsignaturaId")]
 
         public decimal SubTotal { get; set;}
 

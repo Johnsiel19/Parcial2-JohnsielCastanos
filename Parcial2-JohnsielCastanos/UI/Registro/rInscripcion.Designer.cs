@@ -44,9 +44,9 @@
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Buscarbutton = new System.Windows.Forms.Button();
             this.Removerbutton = new System.Windows.Forms.Button();
             this.Agregarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.MontoInscripciontextBox = new System.Windows.Forms.TextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
@@ -64,13 +64,13 @@
             this.detalleDataGridView.Location = new System.Drawing.Point(21, 69);
             this.detalleDataGridView.Name = "detalleDataGridView";
             this.detalleDataGridView.RowTemplate.Height = 24;
-            this.detalleDataGridView.Size = new System.Drawing.Size(355, 150);
+            this.detalleDataGridView.Size = new System.Drawing.Size(374, 150);
             this.detalleDataGridView.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.Location = new System.Drawing.Point(19, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
             this.label1.TabIndex = 1;
@@ -79,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 175);
+            this.label2.Location = new System.Drawing.Point(19, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 2;
@@ -88,7 +88,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 128);
+            this.label3.Location = new System.Drawing.Point(19, 128);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 3;
@@ -97,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 77);
+            this.label4.Location = new System.Drawing.Point(19, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             // InscripcionIdnumericUpDown
             // 
-            this.InscripcionIdnumericUpDown.Location = new System.Drawing.Point(154, 28);
+            this.InscripcionIdnumericUpDown.Location = new System.Drawing.Point(148, 26);
             this.InscripcionIdnumericUpDown.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -118,15 +118,15 @@
             // EstudiantecomboBox
             // 
             this.EstudiantecomboBox.FormattingEnabled = true;
-            this.EstudiantecomboBox.Location = new System.Drawing.Point(154, 70);
+            this.EstudiantecomboBox.Location = new System.Drawing.Point(148, 74);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
-            this.EstudiantecomboBox.Size = new System.Drawing.Size(250, 24);
+            this.EstudiantecomboBox.Size = new System.Drawing.Size(269, 24);
             this.EstudiantecomboBox.TabIndex = 6;
             // 
             // AsignaturacomboBox
             // 
             this.AsignaturacomboBox.FormattingEnabled = true;
-            this.AsignaturacomboBox.Location = new System.Drawing.Point(126, 24);
+            this.AsignaturacomboBox.Location = new System.Drawing.Point(126, 21);
             this.AsignaturacomboBox.Name = "AsignaturacomboBox";
             this.AsignaturacomboBox.Size = new System.Drawing.Size(188, 24);
             this.AsignaturacomboBox.TabIndex = 7;
@@ -135,21 +135,21 @@
             // 
             this.FechaInscripciondateTimePicker.CustomFormat = "dd/MM/yyyy";
             this.FechaInscripciondateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.FechaInscripciondateTimePicker.Location = new System.Drawing.Point(154, 123);
+            this.FechaInscripciondateTimePicker.Location = new System.Drawing.Point(148, 123);
             this.FechaInscripciondateTimePicker.Name = "FechaInscripciondateTimePicker";
-            this.FechaInscripciondateTimePicker.Size = new System.Drawing.Size(250, 22);
+            this.FechaInscripciondateTimePicker.Size = new System.Drawing.Size(269, 22);
             this.FechaInscripciondateTimePicker.TabIndex = 8;
             // 
             // MontonumericUpDown
             // 
-            this.MontonumericUpDown.Location = new System.Drawing.Point(154, 175);
+            this.MontonumericUpDown.Location = new System.Drawing.Point(148, 173);
             this.MontonumericUpDown.Maximum = new decimal(new int[] {
             20000,
             0,
             0,
             0});
             this.MontonumericUpDown.Name = "MontonumericUpDown";
-            this.MontonumericUpDown.Size = new System.Drawing.Size(100, 22);
+            this.MontonumericUpDown.Size = new System.Drawing.Size(78, 22);
             this.MontonumericUpDown.TabIndex = 9;
             // 
             // label5
@@ -166,9 +166,9 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(174, 551);
+            this.Guardarbutton.Location = new System.Drawing.Point(168, 543);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(80, 63);
+            this.Guardarbutton.Size = new System.Drawing.Size(80, 71);
             this.Guardarbutton.TabIndex = 33;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -180,9 +180,9 @@
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(298, 551);
+            this.Eliminarbutton.Location = new System.Drawing.Point(318, 543);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(80, 63);
+            this.Eliminarbutton.Size = new System.Drawing.Size(80, 71);
             this.Eliminarbutton.TabIndex = 32;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -194,9 +194,9 @@
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(53, 551);
+            this.Nuevobutton.Location = new System.Drawing.Point(47, 543);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(80, 63);
+            this.Nuevobutton.Size = new System.Drawing.Size(80, 71);
             this.Nuevobutton.TabIndex = 31;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -210,25 +210,12 @@
             this.groupBox1.Controls.Add(this.Agregarbutton);
             this.groupBox1.Controls.Add(this.AsignaturacomboBox);
             this.groupBox1.Controls.Add(this.detalleDataGridView);
-            this.groupBox1.Location = new System.Drawing.Point(28, 218);
+            this.groupBox1.Location = new System.Drawing.Point(22, 218);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(395, 270);
+            this.groupBox1.Size = new System.Drawing.Size(415, 270);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
-            // 
-            // Buscarbutton
-            // 
-            this.Buscarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.search_locate_find_13974;
-            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(314, 17);
-            this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(90, 42);
-            this.Buscarbutton.TabIndex = 36;
-            this.Buscarbutton.Text = "Buscar";
-            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Buscarbutton.UseVisualStyleBackColor = true;
-            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Removerbutton
             // 
@@ -247,17 +234,30 @@
             // Agregarbutton
             // 
             this.Agregarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.add_insert_plus_1588;
-            this.Agregarbutton.Location = new System.Drawing.Point(334, 18);
+            this.Agregarbutton.Location = new System.Drawing.Point(353, 21);
             this.Agregarbutton.Name = "Agregarbutton";
             this.Agregarbutton.Size = new System.Drawing.Size(42, 38);
             this.Agregarbutton.TabIndex = 35;
             this.Agregarbutton.UseVisualStyleBackColor = true;
             this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.search_locate_find_13974;
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(318, 15);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(99, 42);
+            this.Buscarbutton.TabIndex = 36;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(202, 497);
+            this.label6.Location = new System.Drawing.Point(196, 497);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 17);
             this.label6.TabIndex = 37;
@@ -265,10 +265,10 @@
             // 
             // MontoInscripciontextBox
             // 
-            this.MontoInscripciontextBox.Location = new System.Drawing.Point(326, 494);
+            this.MontoInscripciontextBox.Location = new System.Drawing.Point(327, 494);
             this.MontoInscripciontextBox.Name = "MontoInscripciontextBox";
             this.MontoInscripciontextBox.ReadOnly = true;
-            this.MontoInscripciontextBox.Size = new System.Drawing.Size(78, 22);
+            this.MontoInscripciontextBox.Size = new System.Drawing.Size(90, 22);
             this.MontoInscripciontextBox.TabIndex = 38;
             // 
             // errorProvider
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 632);
+            this.ClientSize = new System.Drawing.Size(459, 632);
             this.Controls.Add(this.MontoInscripciontextBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Guardarbutton);

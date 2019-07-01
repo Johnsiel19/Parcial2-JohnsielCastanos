@@ -126,6 +126,16 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
                 AsignaturacomboBox.Focus();
                 paso = false;
             }
+
+
+            if (FechaInscripciondateTimePicker.Value > DateTime.Now)
+            {
+                errorProvider.SetError(FechaInscripciondateTimePicker, "La fecha no puede ser despues de hoy");
+                FechaInscripciondateTimePicker.Focus();
+                paso = false;
+            }
+
+
             return paso;
         }
 

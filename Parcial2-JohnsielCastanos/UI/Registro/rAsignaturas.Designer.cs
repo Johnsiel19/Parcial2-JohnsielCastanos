@@ -47,15 +47,17 @@
             // 
             // AsignaturaIdnumericUpDown
             // 
-            this.AsignaturaIdnumericUpDown.Location = new System.Drawing.Point(151, 32);
+            this.AsignaturaIdnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AsignaturaIdnumericUpDown.Location = new System.Drawing.Point(146, 31);
             this.AsignaturaIdnumericUpDown.Name = "AsignaturaIdnumericUpDown";
-            this.AsignaturaIdnumericUpDown.Size = new System.Drawing.Size(97, 22);
+            this.AsignaturaIdnumericUpDown.Size = new System.Drawing.Size(97, 23);
             this.AsignaturaIdnumericUpDown.TabIndex = 26;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 81);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label6.Location = new System.Drawing.Point(27, 80);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 25;
@@ -63,15 +65,17 @@
             // 
             // DescripciontextBox
             // 
-            this.DescripciontextBox.Location = new System.Drawing.Point(151, 78);
+            this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.DescripciontextBox.Location = new System.Drawing.Point(146, 77);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(202, 22);
+            this.DescripciontextBox.Size = new System.Drawing.Size(202, 23);
             this.DescripciontextBox.TabIndex = 24;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 128);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label4.Location = new System.Drawing.Point(27, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 22;
@@ -80,7 +84,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 37);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label1.Location = new System.Drawing.Point(27, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 21;
@@ -88,9 +93,10 @@
             // 
             // CreditosnumericUpDown
             // 
-            this.CreditosnumericUpDown.Location = new System.Drawing.Point(151, 128);
+            this.CreditosnumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CreditosnumericUpDown.Location = new System.Drawing.Point(146, 122);
             this.CreditosnumericUpDown.Name = "CreditosnumericUpDown";
-            this.CreditosnumericUpDown.Size = new System.Drawing.Size(97, 22);
+            this.CreditosnumericUpDown.Size = new System.Drawing.Size(97, 23);
             this.CreditosnumericUpDown.TabIndex = 33;
             // 
             // errorProvider
@@ -99,12 +105,12 @@
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Buscarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.search_locate_find_13974;
             this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Buscarbutton.Location = new System.Drawing.Point(260, 25);
+            this.Buscarbutton.Location = new System.Drawing.Point(249, 21);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(93, 40);
+            this.Buscarbutton.Size = new System.Drawing.Size(99, 40);
             this.Buscarbutton.TabIndex = 31;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -113,12 +119,12 @@
             // 
             // Guardarbutton
             // 
-            this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Guardarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.guardar;
             this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Guardarbutton.Location = new System.Drawing.Point(156, 188);
+            this.Guardarbutton.Location = new System.Drawing.Point(146, 184);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(80, 59);
+            this.Guardarbutton.Size = new System.Drawing.Size(80, 68);
             this.Guardarbutton.TabIndex = 30;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -127,12 +133,12 @@
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Eliminarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.eliminar;
             this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Eliminarbutton.Location = new System.Drawing.Point(280, 188);
+            this.Eliminarbutton.Location = new System.Drawing.Point(270, 184);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(80, 59);
+            this.Eliminarbutton.Size = new System.Drawing.Size(80, 68);
             this.Eliminarbutton.TabIndex = 29;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -141,12 +147,12 @@
             // 
             // Nuevobutton
             // 
-            this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Nuevobutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.nuevo;
             this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Nuevobutton.Location = new System.Drawing.Point(35, 188);
+            this.Nuevobutton.Location = new System.Drawing.Point(25, 184);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(80, 59);
+            this.Nuevobutton.Size = new System.Drawing.Size(80, 68);
             this.Nuevobutton.TabIndex = 28;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -157,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(401, 268);
+            this.ClientSize = new System.Drawing.Size(385, 268);
             this.Controls.Add(this.CreditosnumericUpDown);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
