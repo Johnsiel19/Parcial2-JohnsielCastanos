@@ -53,6 +53,8 @@ namespace Parcial2_JohnsielCastanos
 
         private void EstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cEstudiantes frm = new cEstudiantes();
+            frm.Show();
             
         }
     }
