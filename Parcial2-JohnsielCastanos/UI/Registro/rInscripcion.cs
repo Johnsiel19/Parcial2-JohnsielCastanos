@@ -20,10 +20,10 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         public rInscripcion()
         {
             InitializeComponent();
-           // LlenarComboBox();
-           // LLenarComboBox2();
-            //EstudiantecomboBox.Text = null;
-           // AsignaturacomboBox.Text = null;
+            LlenarComboBox();
+            LLenarComboBox2();
+            EstudiantecomboBox.Text = null;
+            AsignaturacomboBox.Text = null;
             this.Detalle = new List<InscripcionDetalle>();
         }
 
@@ -294,7 +294,8 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
 
                 CargarGrid();
             }
-           
+            AsignaturacomboBox.Text = null;
+
         }
 
         private void Removerbutton_Click(object sender, EventArgs e)

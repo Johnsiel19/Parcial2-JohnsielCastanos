@@ -61,6 +61,7 @@
             // 
             // FiltrocomboBox
             // 
+            this.FiltrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
@@ -153,6 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(883, 412);
             this.Controls.Add(this.FiltroFecha);
             this.Controls.Add(this.ConsultadataGridView);
@@ -165,6 +167,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "cInscripciones";
             this.Text = "Consultas Inscripciones";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();

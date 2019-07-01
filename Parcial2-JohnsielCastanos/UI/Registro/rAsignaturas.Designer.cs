@@ -163,6 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(385, 268);
             this.Controls.Add(this.CreditosnumericUpDown);
             this.Controls.Add(this.Buscarbutton);
@@ -174,6 +175,8 @@
             this.Controls.Add(this.DescripciontextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rAsignaturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro Asignaturas";

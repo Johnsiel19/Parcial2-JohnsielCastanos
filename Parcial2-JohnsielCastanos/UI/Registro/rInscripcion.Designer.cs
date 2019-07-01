@@ -117,6 +117,7 @@
             // 
             // EstudiantecomboBox
             // 
+            this.EstudiantecomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.EstudiantecomboBox.FormattingEnabled = true;
             this.EstudiantecomboBox.Location = new System.Drawing.Point(148, 74);
             this.EstudiantecomboBox.Name = "EstudiantecomboBox";
@@ -125,7 +126,10 @@
             // 
             // AsignaturacomboBox
             // 
+            this.AsignaturacomboBox.AllowDrop = true;
+            this.AsignaturacomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.AsignaturacomboBox.FormattingEnabled = true;
+            this.AsignaturacomboBox.IntegralHeight = false;
             this.AsignaturacomboBox.Location = new System.Drawing.Point(126, 21);
             this.AsignaturacomboBox.Name = "AsignaturacomboBox";
             this.AsignaturacomboBox.Size = new System.Drawing.Size(188, 24);
@@ -279,6 +283,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(459, 632);
             this.Controls.Add(this.MontoInscripciontextBox);
             this.Controls.Add(this.label6);
@@ -295,9 +300,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "rInscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "rInscripcion";
+            this.Text = "Registro Inscripcion";
             ((System.ComponentModel.ISupportInitialize)(this.detalleDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InscripcionIdnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MontonumericUpDown)).EndInit();

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
@@ -40,8 +40,8 @@
             // 
             // ConsultadataGridView
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.ConsultadataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.ConsultadataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.ConsultadataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(27, 73);
@@ -59,6 +59,7 @@
             // 
             // FiltrocomboBox
             // 
+            this.FiltrocomboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FiltrocomboBox.FormattingEnabled = true;
             this.FiltrocomboBox.Items.AddRange(new object[] {
             "Todo",
@@ -104,6 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(583, 401);
             this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.CriteriotextBox);
@@ -111,6 +113,8 @@
             this.Controls.Add(this.Consultarbutton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "cAsignaturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Consultas Asignaturas";

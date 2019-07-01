@@ -96,21 +96,21 @@
             // asignaturasToolStripMenuItem
             // 
             this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
-            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.asignaturasToolStripMenuItem.Text = "Asignaturas";
             this.asignaturasToolStripMenuItem.Click += new System.EventHandler(this.AsignaturasToolStripMenuItem_Click);
             // 
             // inscripcionToolStripMenuItem1
             // 
             this.inscripcionToolStripMenuItem1.Name = "inscripcionToolStripMenuItem1";
-            this.inscripcionToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
+            this.inscripcionToolStripMenuItem1.Size = new System.Drawing.Size(161, 26);
             this.inscripcionToolStripMenuItem1.Text = "Inscripcion";
             this.inscripcionToolStripMenuItem1.Click += new System.EventHandler(this.InscripcionToolStripMenuItem1_Click);
             // 
             // estudiantesToolStripMenuItem
             // 
             this.estudiantesToolStripMenuItem.Name = "estudiantesToolStripMenuItem";
-            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.estudiantesToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.estudiantesToolStripMenuItem.Text = "Estudiantes";
             this.estudiantesToolStripMenuItem.Click += new System.EventHandler(this.EstudiantesToolStripMenuItem_Click);
             // 
@@ -123,7 +123,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Main From";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
