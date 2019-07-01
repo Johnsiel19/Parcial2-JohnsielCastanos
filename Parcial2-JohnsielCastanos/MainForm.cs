@@ -50,5 +50,10 @@ namespace Parcial2_JohnsielCastanos
             cInscripciones frm = new cInscripciones();
             frm.Show();
         }
+
+        private void EstudiantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

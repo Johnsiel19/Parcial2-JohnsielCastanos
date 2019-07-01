@@ -33,12 +33,12 @@
             this.FiltrocomboBox = new System.Windows.Forms.ComboBox();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Consultarbutton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.FiltroFecha = new System.Windows.Forms.CheckBox();
+            this.Consultarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,19 +90,6 @@
             this.DesdedateTimePicker.Size = new System.Drawing.Size(101, 22);
             this.DesdedateTimePicker.TabIndex = 25;
             // 
-            // Consultarbutton
-            // 
-            this.Consultarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.search_locate_find_13974;
-            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Consultarbutton.Location = new System.Drawing.Point(750, 41);
-            this.Consultarbutton.Name = "Consultarbutton";
-            this.Consultarbutton.Size = new System.Drawing.Size(109, 33);
-            this.Consultarbutton.TabIndex = 24;
-            this.Consultarbutton.Text = "Consultar";
-            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Consultarbutton.UseVisualStyleBackColor = true;
-            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -149,6 +136,19 @@
             this.FiltroFecha.Text = "Filtrar Fecha";
             this.FiltroFecha.UseVisualStyleBackColor = true;
             // 
+            // Consultarbutton
+            // 
+            this.Consultarbutton.Image = global::Parcial2_JohnsielCastanos.Properties.Resources.search_locate_find_13974;
+            this.Consultarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Consultarbutton.Location = new System.Drawing.Point(750, 41);
+            this.Consultarbutton.Name = "Consultarbutton";
+            this.Consultarbutton.Size = new System.Drawing.Size(109, 33);
+            this.Consultarbutton.TabIndex = 24;
+            this.Consultarbutton.Text = "Consultar";
+            this.Consultarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Consultarbutton.UseVisualStyleBackColor = true;
+            this.Consultarbutton.Click += new System.EventHandler(this.Consultarbutton_Click);
+            // 
             // cInscripciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -166,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "cInscripciones";
-            this.Text = "cInscripciones";
+            this.Text = "Consultas Inscripciones";
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

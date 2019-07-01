@@ -121,6 +121,9 @@
     <EmbeddedResource Include="UI\Consultas\cAsignaturas.resx">
       <DependentUpon>cAsignaturas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Consultas\cEstudiantes.resx">
+      <DependentUpon>cEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Consultas\cInscripciones.resx">
       <DependentUpon>cInscripciones.cs</DependentUpon>
     </EmbeddedResource>
