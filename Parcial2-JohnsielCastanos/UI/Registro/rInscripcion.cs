@@ -310,8 +310,11 @@ namespace Parcial2_JohnsielCastanos.UI.Registro
         {
             if (detalleDataGridView.Rows.Count > 0 && detalleDataGridView.CurrentRow != null)
             {
+             
                 //remover la fila
                 Detalle.RemoveAt(detalleDataGridView.CurrentRow.Index);
+               
+
                 CargarGrid();
             }
         }

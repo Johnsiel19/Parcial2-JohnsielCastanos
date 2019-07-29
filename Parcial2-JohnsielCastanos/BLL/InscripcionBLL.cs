@@ -43,6 +43,7 @@ namespace Parcial2_JohnsielCastanos.BLL
                 {
                     if (item.Id == 0)
                     {
+                 
                         db.Entry(item).State = EntityState.Added;
                     }
                         
@@ -70,32 +71,6 @@ namespace Parcial2_JohnsielCastanos.BLL
         }
 
 
-        public static Estudiantes Buscar(int id)
-        {
-            Estudiantes estudiantes = new Estudiantes();
-            Contexto db = new Contexto();
-
-
-            try
-            {
-                estudiantes = db.Estudiantes.Find(id);
-               
-
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Se produjo un error al intentar Buscar");
-            }
-            finally
-            {
-                db.Dispose();
-            }
-            return estudiantes;
-
-        }
-
-   
         public static bool Guardar(Inscripcion inscripcion)
         {
             bool paso = false;
